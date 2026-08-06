@@ -1,3 +1,5 @@
+from array import array
+
 # Array in Python
 
 # Summary Table
@@ -51,21 +53,102 @@ for item in fruits:
 
 students=["Virendra","Ritesh","Karan","Prakash"]
 
-students.append("Anuj")
-print(students)
+# students.append("Anuj")
+# print(students)
 
 
 # insert(index, Value)	Index par element add karta hai
 
-students.insert(2,'Mahek')  
-print(students)
+# students.insert(2,'Mahek')  
+# print(students)
 
 
 
 # remove(x)	Value delete karta hai
-students.remove('Mahek')
-print(students)
+# students.remove('Mahek')
+# print(students)
 
 
 # pop(i)	Index se element delete karta hai
-students.pop()
+# students.pop(2)
+# print(students)
+
+
+
+# index(x)	Element ka index batata hai
+index=students.index("Ritesh")
+print(index)
+
+
+# count(x)	Value kitni baar hai
+number=[10,20,30,30,40,43,54,20]
+print(number.count(30))
+
+
+
+# reverse()	Array ko reverse karta hai
+students.reverse()
+print(students)
+
+
+
+# extend(arr)	Do arrays ko jodta hai
+arr1=[10,20,30,40,50]
+arr2=['virendra','Ritesh','Prakash']
+arr1.extend(arr2)
+print(arr1)
+
+
+
+# buffer_info()	Memory information deta hai
+# from array import array      Krana hoga, upar laga hai..
+
+number = array('i', [10, 20, 30, 30, 40, 43, 54, 20])
+
+print(number.buffer_info())
+
+address, size = number.buffer_info()
+
+print("Memory Address:", address)
+print("Total Elements:", size)
+
+
+# typecode	Data type batata hai
+
+# Important Type Codes
+
+# Type Code	Data Type
+#   'i'	        Integer
+#   'f'	        Float
+#   'd'	        Double
+#   'u'	        Unicode Character
+
+arr = array('i', [10, 20, 30])
+
+print(arr.typecode)
+
+
+# len(arr)	Total elements batata hai
+
+print(len(students))
+
+
+# 'u'	Unicode Character
+letters = array('u', ['A', 'B', 'C', 'D'])
+
+print(letters)   # output : array('u', 'ABCD')
+
+
+marks = array('i', [78, 85, 92, 67, 88])
+
+print("Student Marks:")
+
+for mark in marks:
+    print(mark)
+
+
+
+total=sum(marks)
+print(total)
+
+
