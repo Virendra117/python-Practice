@@ -110,13 +110,33 @@
 
 # हर Object का अलग-अलग Data होता है।
 
-class Student:
+# class Student:
 
-    def __init__(self, name):
-        self.name = name
+#     def __init__(self, name):
+#         self.name = name
 
-s1 = Student("Virendra")    # first data value
-s2 = Student("V3i Technnology")    # second data value
+# s1 = Student("Virendra")    # first data value
+# s2 = Student("V3i Technnology")    # second data value
 
-print(s1.name)
-print(s2.name)
+# print(s1.name)
+# print(s2.name)
+
+
+# 6. Four Pillars of OOPs
+# (A) Encapsulation
+
+# Data और Methods को एक Class के अंदर रखना।
+
+class Bank:
+
+    def __init__(self):
+        self.balance = 5000
+
+b = Bank()
+
+print(b.balance)
+
+# (B) Abstraction
+
+# ज़रूरी जानकारी दिखाना और Internal Details छिपाना।
+
