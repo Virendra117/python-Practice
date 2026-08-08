@@ -1,3 +1,5 @@
+
+from abc import ABC, abstractmethod
 # OOPs (Object-Oriented Programming System) in Python
 
 # 1. Class
@@ -123,18 +125,75 @@
 
 
 # 6. Four Pillars of OOPs
-# (A) Encapsulation
+
+# (A) Inheritance
+
+# एक Class दूसरी Class की Properties और Methods का उपयोग करती है।
+
+# Parent Class
+
+# class Animal:
+
+#     def sound(self):
+#         print("Animal Sound")
+
+
+# class Dog(Animal):
+#     pass
+
+# d = Dog()
+# d.sound()
+
+
+# Types of Inheritance
+
+# 1. Single Inheritance
+class A:
+    pass
+
+class B(A):
+    pass
+
+
+# Method Overriding
+
+# Parent Class (Super Class)
+# class Animal:
+
+#     def make_sound(self):
+#         print("Animal makes a sound")
+
+
+# # Child Class (Sub Class)
+# class Dog(Animal):
+#     # Parent class के method को यहाँ override किया गया है
+#     def make_sound(self):
+#         print("Dog barks")
+
+
+# # Objects बनाना
+# my_animal = Animal()
+# my_dog = Dog()
+
+# my_animal.make_sound()  # Output: Animal makes a sound
+# my_dog.make_sound()  # Output: Dog barks
+
+
+
+
+
+# (B) Encapsulation
 
 # Data और Methods को एक Class के अंदर रखना।
 
-class Bank:
+# class Bank:
 
-    def __init__(self):
-        self.balance = 5000
+#     def __init__(self):
+#         self.balance = 5000
 
-b = Bank()
+# b = Bank()
 
-print(b.balance)
+# print(b.balance)
 
 
 # __str__() Method
@@ -143,30 +202,47 @@ print(b.balance)
 # Python uses the default implementation, 
 # which returns a string like <__main__.ClassName object at 0x00000123>.
 
-class Dog:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# class Dog:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
 
-    def __str__(self):
-        return f"{self.name} is {self.age} years old."
-dog1 = Dog("Buddy", 3)
-dog2 = Dog("Charlie", 5)
+#     def __str__(self):
+#         return f"{self.name} is {self.age} years old."
+# dog1 = Dog("Buddy", 3)
+# dog2 = Dog("Charlie", 5)
 
-print(dog1)  
-print(dog2)
-
-
-
-def __init__():
-    return "Viru"
+# print(dog1)  
+# print(dog2)
 
 
-sss=__init__()
-print(sss)
+
+# def __init__():
+#     return "Viru"
 
 
-# (B) Abstraction
+# sss=__init__()
+# print(sss)
+
+
+# (C) Abstraction
 
 # ज़रूरी जानकारी दिखाना और Internal Details छिपाना।
 
+# class Animal(ABC):
+
+#     @abstractmethod
+#     def sound(self):
+#         pass
+
+# class Dog(Animal):
+
+#     def sound(self):
+#         print("Bark")
+
+# d=Dog()
+# d.sound()
+
+
+
+        
