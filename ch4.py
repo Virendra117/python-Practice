@@ -152,3 +152,28 @@ total=sum(marks)
 print(total)
 
 
+
+
+# ****************************************************
+original = [10, 20, 30, 40]
+
+n = len(original)
+
+total = n * (n + 1) // 2
+
+print("Total subarrays:", total)
+
+# Print all subarray
+
+for i in range(n):
+    for j in range(i, n):
+        print(original[i:j+1])
+
+
+
+# Sum of Each Subarray
+
+for i in range(n):
+    for j in range(i, n):
+        subarray = original[i:j+1]
+        print(subarray, "=", sum(subarray))
