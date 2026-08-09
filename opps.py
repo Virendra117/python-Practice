@@ -148,11 +148,105 @@ from abc import ABC, abstractmethod
 # Types of Inheritance
 
 # 1. Single Inheritance
-class A:
-    pass
+# class A:
+#     pass
 
-class B(A):
-    pass
+# class B(A):
+#     pass
+
+
+
+# 2. Multilevel Inheritance
+# class A:
+#     pass
+
+# class B(A):
+#     pass
+
+# class C(B):
+#     pass
+
+
+# 3. Multiple Inheritance
+# class A:
+#     pass
+
+# class B:
+#     pass
+
+# class C(A, B):
+#     pass
+
+
+
+# 4. Hierarchical Inheritance
+# class A:
+#     pass
+
+# class B(A):
+#     pass
+
+# class C(A):
+#     pass
+
+
+
+# 
+# 5. Hybrid Inheritance
+
+# Hybrid Inheritance, Multiple और Hierarchical Inheritance का Combination होती है।
+# class A:
+#     pass
+
+# class B(A):
+#     pass
+
+# class C(A):
+#     pass
+
+# class D(B, C):
+#     pass
+
+
+# (D) Polymorphism
+
+# एक Method अलग-अलग Objects पर अलग तरीके से काम करती है।
+# class Dog:
+
+#     def sound(self):
+#         print("Bark")
+
+# class Cat:
+
+#     def sound(self):
+#         print("Meow")
+
+# animals = [Dog(), Cat()]
+
+# for a in animals:
+#     a.sound()
+
+
+# super() Function
+
+# Parent Class के Constructor या Method को Call करने के लिए।  
+# class Person:
+
+#     def __init__(self, name):
+#         self.name = name
+
+# class Student(Person):
+
+#     def __init__(self, name, roll):
+#         super().__init__(name)
+#         self.roll = roll
+
+# s = Student("Rahul", 101)
+
+# print(s.name)
+# print(s.roll)  
+
+
 
 
 # Method Overriding
@@ -245,4 +339,38 @@ class B(A):
 
 
 
-        
+
+
+# Access Modifiers
+
+# Python में Access Modifiers Naming Convention पर आधारित होते हैं।
+
+
+class StudentPublic:
+    def __init__(self):
+        self.name = "Rahul is Public"
+
+s=StudentPublic()
+print(s.name)
+
+# Protected
+
+class StudentPrivate:
+    def __init__(self):
+        self._name = "Rahul is Private"        
+
+sp=StudentPrivate()
+print(sp._name)
+
+
+# Private
+class StudentProtected:
+    def __init__(self):
+        self.__name = "Rahul is Protected!"
+
+    def get_name(self):
+        return self.__name
+
+
+spp=StudentProtected()
+print(spp.get_name())
