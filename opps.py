@@ -374,3 +374,31 @@ class StudentProtected:
 
 spp=StudentProtected()
 print(spp.get_name())
+
+
+
+
+# Real Life Example
+class BankAccount:
+
+    def __init__(self, holder, balance=0):
+        self.holder = holder
+        self.__balance = balance
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def withdraw(self, amount):
+        if amount <= self.__balance:
+            self.__balance -= amount
+        else:
+            print("Insufficient Balance")
+
+    def show_balance(self):
+        print("Balance:", self.__balance)
+
+account = BankAccount("Virendra", 1000)
+
+account.deposit(500)
+account.withdraw(200)
+account.show_balance()
