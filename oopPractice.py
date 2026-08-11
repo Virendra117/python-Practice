@@ -14,38 +14,38 @@
 # display()
 
 # ----------------------------------------------------------------
-class Student:   
-    def __init__(self,name,age,course):
-        self.name=name
-        self.age=age
-        self.course=course
+# class Student:   
+#     def __init__(self,name,age,course):
+#         self.name=name
+#         self.age=age
+#         self.course=course
     
-    def Display(self):
-        print("Name :", self.name)
-        print("Age :", self.age)
-        print("Course :", self.course)
+#     def Display(self):
+#         print("Name :", self.name)
+#         print("Age :", self.age)
+#         print("Course :", self.course)
 
-s=Student("Virendra",32,"Data Analyst")
-s.Display()
+# s=Student("Virendra",32,"Data Analyst")
+# s.Display()
 
 # --------------------------------------------------------------------
 print("**********************************************************")
 
-class Employee:
-    def __init__(self,name, salary=0):
-        self.name=name
-        self.salary=salary
+# class Employee:
+#     def __init__(self,name, salary=0):
+#         self.name=name
+#         self.salary=salary
 
-    def SalaryDisplay(self):
-        print("Employee Name :", self.name)
-        print("Salary : ", self.salary)
+#     def SalaryDisplay(self):
+#         print("Employee Name :", self.name)
+#         print("Salary : ", self.salary)
 
 
-emp1=Employee("Virendra", 25000)    
-emp1.SalaryDisplay()   
+# emp1=Employee("Virendra", 25000)    
+# emp1.SalaryDisplay()   
 
-emp2=Employee("Surendra", 85000)    
-emp2.SalaryDisplay()   
+# emp2=Employee("Surendra", 85000)    
+# emp2.SalaryDisplay()   
 
 
 # --------------------------------------------------------
@@ -70,25 +70,25 @@ emp2.SalaryDisplay()
 
 # Solution
 print("*******************************************************")
-class Rectangle:
-    def __init__(self, width, height):
-        self.width=width
-        self.height=height
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width=width
+#         self.height=height
 
-    def Area(self):
-          area=self.width*self.height
-          return area      
-
-
-    def Parameter(self):
-        parameter=2*(self.width+self.height)
-        return parameter
+#     def Area(self):
+#           area=self.width*self.height
+#           return area      
 
 
-area1=Rectangle(20,12)
+#     def Parameter(self):
+#         parameter=2*(self.width+self.height)
+#         return parameter
 
-print("Area of Rectangle : ",area1.Area())
-print("Parameter of Rectangle : ",area1.Parameter())
+
+# area1=Rectangle(20,12)
+
+# print("Area of Rectangle : ",area1.Area())
+# print("Parameter of Rectangle : ",area1.Parameter())
 
 
 
@@ -103,27 +103,27 @@ print("Parameter of Rectangle : ",area1.Parameter())
 # divide()
 print("***************************************************************")
 
-class Calculator:
-    def __init__(self,num1, num2):
-        self.num1=num1
-        self.num2=num2
+# class Calculator:
+#     def __init__(self,num1, num2):
+#         self.num1=num1
+#         self.num2=num2
 
-    def add(self):
-        print("Add two numbers : ",(self.num1+self.num2))        
-    def subtract(self):
-        print("Substract two numbers : ",(self.num1-self.num2))        
-    def multiply(self):
-        print("Multiply two numbers : ",(self.num1*self.num2))        
-    def divide(self):
-        print("Divide two numbers : ",(self.num1/self.num2))        
+#     def add(self):
+#         print("Add two numbers : ",(self.num1+self.num2))        
+#     def subtract(self):
+#         print("Substract two numbers : ",(self.num1-self.num2))        
+#     def multiply(self):
+#         print("Multiply two numbers : ",(self.num1*self.num2))        
+#     def divide(self):
+#         print("Divide two numbers : ",(self.num1/self.num2))        
 
 
 
-calc=Calculator(12,20)
-calc.add()
-calc.subtract()
-calc.multiply()
-calc.divide()
+# calc=Calculator(12,20)
+# calc.add()
+# calc.subtract()
+# calc.multiply()
+# calc.divide()
 
 
 # ******************************************************
@@ -140,21 +140,21 @@ calc.divide()
 # area()
 # circumference()
 
-class Circle:
-    def __init__(self,radius):
-        self.radius=radius
+# class Circle:
+#     def __init__(self,radius):
+#         self.radius=radius
 
-    def area(self):
-        print("Area of Circle :",(3.14*self.radius*self.radius))
+#     def area(self):
+#         print("Area of Circle :",(3.14*self.radius*self.radius))
 
-    def circumference(self):
-        print("Circumfrence of Circle : ",(2*3.14*self.radius))
+#     def circumference(self):
+#         print("Circumfrence of Circle : ",(2*3.14*self.radius))
 
 
 
-ac=Circle(10)
-ac.area()
-ac.circumference()
+# ac=Circle(10)
+# ac.area()
+# ac.circumference()
 
 
 # *************************************************************************
@@ -174,16 +174,98 @@ ac.circumference()
 # check_balance()
 
 
-class BankAccount:
-    def __init__(self,account_holder,balance=0):
-        self.account_holder=account_holder
-        self.balance=balance
+# class BankAccount:
+#     def __init__(self,account_holder,balance=0):
+#         self.account_holder=account_holder
+#         self.balance=balance
 
-    def deposit(self,amount):
-        self.balance+=amount  
-        print("Balance : ",amount)      
+#     def deposit(self,amount):
+#         self.balance+=amount  
+#         print("Deposit : ",amount) 
+
+#     def withdraw(self, amount):
+#         if amount <= self.balance:
+#             self.balance -= amount
+#             print("Withdrawn:", amount)
+#         else:
+#             print("Insufficient Balance")     
+
+
+#     def check_balance(self):
+#         print("Balance:", self.balance)                         
 
 
 
-dpst=BankAccount("Virendra",1000)
-dpst.deposit(500)
+# dpst=BankAccount("Virendra",1000)
+# dpst.deposit(500)
+# dpst.withdraw(200)
+# dpst.check_balance()
+
+# *******************************************************************
+
+# Car class बनाइए।
+
+# Properties:
+
+# brand
+# model
+# price
+
+# Methods:
+
+# start()
+# stop()
+# display()
+
+# Example:
+
+# Car Started
+# Car Stopped
+
+class Car:
+    def __init__(self,brand,model,price):
+        self.brand=brand
+        self.model=model
+        self.price=price
+
+
+    def start(self):
+        print("Car is started.")   
+
+    def stop(self):
+        print("Car is Stoped.")   
+
+
+    def display(self):
+        print("Brand :", self.brand)   
+        print("Model :", self.model)   
+        print("Price :", self.price)   
+
+
+car=Car("Maruti","XVDi", 3500000)
+
+car.display()
+car.start()
+car.stop()
+
+
+
+# *********************************************************************
+
+# Mobile class बनाइए।
+
+# Properties:
+
+# brand
+# model
+# price
+
+# Methods:
+
+# call()
+# message()
+# display()
+
+
+class Mobile:
+    def __init__()
