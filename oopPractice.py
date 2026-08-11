@@ -222,31 +222,31 @@ print("***************************************************************")
 # Car Started
 # Car Stopped
 
-class Car:
-    def __init__(self,brand,model,price):
-        self.brand=brand
-        self.model=model
-        self.price=price
+# class Car:
+#     def __init__(self,brand,model,price):
+#         self.brand=brand
+#         self.model=model
+#         self.price=price
 
 
-    def start(self):
-        print("Car is started.")   
+#     def start(self):
+#         print("Car is started.")   
 
-    def stop(self):
-        print("Car is Stoped.")   
-
-
-    def display(self):
-        print("Brand :", self.brand)   
-        print("Model :", self.model)   
-        print("Price :", self.price)   
+#     def stop(self):
+#         print("Car is Stoped.")   
 
 
-car=Car("Maruti","XVDi", 3500000)
+#     def display(self):
+#         print("Brand :", self.brand)   
+#         print("Model :", self.model)   
+#         print("Price :", self.price)   
 
-car.display()
-car.start()
-car.stop()
+
+# car=Car("Maruti","XVDi", 3500000)
+
+# car.display()
+# car.start()
+# car.stop()
 
 
 
@@ -267,5 +267,69 @@ car.stop()
 # display()
 
 
-class Mobile:
-    def __init__()
+# class Mobile:
+#     def __init__(self,brand, model,price):
+#         self.brand=brand
+#         self.model=model
+#         self.price=price
+    
+#     def call(self):
+#         print("Calling.....")
+    
+#     def message(self):
+#         print("Message..")
+    
+#     def display(self):
+#         print("Brand : ",self.brand)
+#         print("Model : ",self.model)
+#         print("Price : ",self.price)
+
+
+# mobile=Mobile("IPhone","17Pro",180000) 
+# mobile.call()
+# mobile.message()
+# mobile.display()  
+
+# *********************************************************
+# BankAccount class में:
+
+# self.__balance
+
+# का इस्तेमाल करें।
+
+# Methods:
+
+# deposit()
+# withdraw()
+# get_balance()
+
+
+class BankAccount:
+    def __init__(self,balance=0):
+        self.__balance=balance
+
+    def deposit(self,amount):
+        self.__balance+=amount
+        print("Deposit : ",amount)
+
+
+    def  withdraw(self,amount):
+        if amount<=self.__balance:
+            self.__balance-=amount
+            print("Withdraw : ",amount,self.__balance)
+    
+
+    def  check_balance(self):
+        print("Balance :", self.__balance)
+
+
+
+
+
+account = BankAccount(5000)
+account.deposit(1000)
+account.withdraw(500)
+account.check_balance()
+
+
+# ********************************************************
