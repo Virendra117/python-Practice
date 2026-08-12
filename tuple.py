@@ -1,3 +1,7 @@
+# List = Changeable
+# Tuple = Fixed
+
+
 # Tuple = multiple values ko ek single variable mein store karne ka collection.
 
 # Tuple ko () parentheses se banate hain:
@@ -109,6 +113,38 @@ name, age, marks = student
 print(name)
 print(age)
 print(marks)
+
+
+
+# Tuple mein Search
+
+# in operator use kar sakte hain
+
+fruits = ("Apple", "Mango", "Banana")
+
+print("Mango" in fruits)
+
+
+# Tuple par Loop
+for fruit in fruits:
+    print(fruit)
+
+
+# Nested Tuple
+students = (
+    ("Rahul", 80),
+    ("Amit", 75),
+    ("Neha", 90)
+)
+print(students[0])   #output ("Rahul", 80)
+print(students[0][0])  # output: Rahul
+print(students[0][1])   # output: 80
+
+
+# Tuple Repetition
+numbers = (1, 2)
+
+print(numbers * 3)
 
 # list=["Apple","Banana","Grapes"]
 # print(list[0])
