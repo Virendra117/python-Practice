@@ -304,32 +304,123 @@ print("***************************************************************")
 # get_balance()
 
 
-class BankAccount:
-    def __init__(self,balance=0):
-        self.__balance=balance
+# class BankAccount:
+#     def __init__(self,balance=0):
+#         self.__balance=balance
 
-    def deposit(self,amount):
-        self.__balance+=amount
-        print("Deposit : ",amount)
+#     def deposit(self,amount):
+#         self.__balance+=amount
+#         print("Deposit : ",amount)
 
 
-    def  withdraw(self,amount):
-        if amount<=self.__balance:
-            self.__balance-=amount
-            print("Withdraw : ",amount,self.__balance)
+#     def  withdraw(self,amount):
+#         if amount<=self.__balance:
+#             self.__balance-=amount
+#             print("Withdraw : ",amount,self.__balance)
     
 
-    def  check_balance(self):
-        print("Balance :", self.__balance)
+#     def  check_balance(self):
+#         print("Balance :", self.__balance)
 
 
 
 
 
-account = BankAccount(5000)
-account.deposit(1000)
-account.withdraw(500)
-account.check_balance()
+# account = BankAccount(5000)
+# account.deposit(1000)
+# account.withdraw(500)
+# account.check_balance()
 
 
 # ********************************************************
+
+# Student class बनाइए।
+
+# Private variable:
+
+# self.__marks
+
+# Methods:
+
+# set_marks()
+# get_marks()
+
+# Condition:
+
+# Marks 0 से 100 के बीच होने चाहिए।
+
+# अगर कोई:
+
+# 150
+# -20
+
+# दे तो "Invalid Marks" print करें।
+
+
+# class Student:
+
+#     def __init__(self):
+#         self.__marks = 0
+
+#     def set_marks(self, marks):
+
+#         if 0 <= marks <= 100:
+#             self.__marks = marks
+#         else:
+#             print("Invalid Marks")
+
+#     def get_marks(self):
+#         return self.__marks
+
+
+# s = Student()
+
+# s.set_marks(85)
+
+# print("Marks:", s.get_marks())
+
+
+# *********************************************
+
+# Parent class:
+
+# Animal
+
+# Method:
+
+# eat()
+
+# Child class:
+
+# Dog
+
+# Method:
+
+# bark()
+
+# Output:
+
+# Dog eats
+# Dog barks
+
+
+
+
+
+class Animal:
+
+    def eat(self):
+        print("Dog eats")
+
+
+class Dog(Animal):
+
+    def bark(self):
+        print("Dog barks")
+
+
+d = Dog()
+
+d.eat()
+d.bark()
+
