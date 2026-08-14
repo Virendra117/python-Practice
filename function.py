@@ -89,3 +89,81 @@ def log_event(event_type, *args, level="INFO", **kwargs):
     print("Metadata:", kwargs)
 
 log_event("USER_LOGIN", "User_123", "IP_192.168.1.1", level="DEBUG", status="Success")
+
+
+
+# Return statement
+
+def calculate(a, b):
+    sum_val = a + b
+    diff_val = a - b
+    return sum_val, diff_val  # Returns a tuple: (sum, diff)
+
+# Unpacking multiple return values
+s, d = calculate(10, 4)
+print(f"Sum: {s}, Difference: {d}")  # Sum: 14, Difference: 6
+
+
+
+# Lambda Functions (Anonymous Functions)
+# A Lambda function is a small, single-expression inline function without a formal def name.
+
+# Syntax: lambda arguments : expression
+
+# Standard function
+def add_five(x):
+    return x + 5
+
+# Equivalent Lambda function
+add_five_lambda = lambda x: x + 5
+
+print(add_five_lambda(10))  # Output: 15
+
+# Commonly used with functions like map(), filter(), or sorted()
+numbers = [1, 2, 3, 4]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)  # Output: [1, 4, 9, 16]
+
+
+
+# Recursive Functions
+
+# A recursive function is a function that calls itself to solve a problem by breaking it into smaller instances.
+
+# Every recursive function requires:
+
+# 1)Base Case: A stopping condition that prevents an infinite loop.
+
+# 2)Recursive Case: The logic where the function calls itself with modified input.
+
+
+# Example: Calculating Factorial (5! = 5 * 4 * 3 * 2 * 1)
+def factorial(n):
+    # Base Case
+    if n == 1:
+        return 1
+    # Recursive Case
+    return n * factorial(n - 1)
+
+print(factorial(5))  # Output: 120
+
+
+# Example:
+# 1-Countdown to Zero
+# A simple visual example of how recursion replaces standard loops.
+
+def countdown(n):
+    if n<=0:
+        print("Blastoff!")
+        return 0
+    print(n)
+    countdown(n - 1)
+countdown(5)
+    
+
+
+# 2. Sum of Numbers (1 to N)Adds all numbers from 1 up to N.
+
+def sumUpto():
+    if 
+
