@@ -164,6 +164,83 @@ countdown(5)
 
 # 2. Sum of Numbers (1 to N)Adds all numbers from 1 up to N.
 
-def sumUpto():
-    if 
+def sumUpto(n):
+    if n<=0:
+        return 0
+    return n+sumUpto(n-1)
+
+print(sumUpto(5))
+
+
+# Important Dunder Methods
+# __init__()
+# __str__()
+# __repr__()
+# __len__()
+# __add__()
+# __eq__()
+# __lt__()
+# __gt__()
+
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self._age = age  # Protected attribute (indicated by single prefix underscore)
+
+    # Getter method
+    def get_age(self):
+        return self._age
+
+    # Setter method
+    def set_age(self, age):
+        if age > 0:
+            self._age = age
+        else:
+            print("Error: Age must be positive!")
+
+# Usage
+s1 = Student("Rahul", 20)
+
+print(s1.get_age())  # Output: 20
+
+s1.set_age(-5)       # Output: Error: Age must be positive!
+s1.set_age(21)
+print(s1.get_age())  # Output: 21
+
+
+
+# -------------------------------------------
+
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self._salary = salary  # Private/Protected backing attribute
+
+    # Getter: Access salary like a variable (emp.salary)
+    @property
+    def salary(self):
+        return self._salary
+
+    # Setter: Set salary using assignment operator (emp.salary = 50000)
+    @salary.setter
+    def salary(self, value):
+        if value < 0:
+            raise ValueError("Salary cannot be negative!")
+        self._salary = value
+
+# Usage
+emp = Employee("Ankit", 45000)
+
+# Accessing getter (No parentheses needed!)
+print(emp.salary)  # Output: 45000
+
+# Using setter
+emp.salary = 55000
+print(emp.salary)  # Output: 55000
+
+# Triggering validation in setter
+try:
+    emp.salary = -1000
+except ValueError as e:
+    print(e)        # Output: Salary cannot be negative!
 
